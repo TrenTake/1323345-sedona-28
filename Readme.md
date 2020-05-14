@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Stephanie Bobyr](https://up.htmlacademy.ru/htmlcss/28/user/1323345).
-* Наставник: `Андрей Островский` (https://htmlacademy.ru/profile/grandmaus).
+* Наставник: [Андрей Островский](https://htmlacademy.ru/profile/grandmaus).
 
 ---
 
