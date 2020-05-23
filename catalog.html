@@ -30,59 +30,62 @@
     </header>
     <main>
       <section>
-        <ul>
-          <li>
-            <h3>Инфраструктура:</h3>
+        <form action="https://echo.htmlacademy.ru/courses" method="get" oninput="priceMax.value=rangeCost.value">
+          <fieldset>
+            <legend>Инфраструктура:</legend>
             <ul>
               <li>
-                <img src="img/checkbox-on.svg" width="23" height="23" alt="Бассейн">
-                <p>Бассейн</p>
+                <input type="checkbox" name="swimmingpool" id="swimmingpool" checked>
+                <label for="swimmingpool">Бассейн</label>
               </li>
               <li>
-                <img src="img/checkbox-off.svg" width="23" height="23" alt="Парковка">
-                <p>Парковка</p>
+                <input type="checkbox" name="parking" id="parking">
+                <label for="parking">Парковка</label>
               </li>
               <li>
-                <img src="img/checkbox-off.svg" width="23" height="23" alt="Wi-Fi">
-                <p>Wi-Fi</p>
+                <input type="checkbox" name="wi-fi" id="wi-fi">
+                <label>Wi-Fi</label>
               </li>
             </ul>
-          </li>
-          <li>
-            <h3>Тип жилья:</h3>
+          </fieldset>
+          <fieldset>
+            <legend>Тип жилья:</legend>
             <ul>
               <li>
-                <img src="img/checkbox-on.svg" width="23" height="23" alt="Гостиница">
-                <p>Гостиница</p>
+                <input type="checkbox" name="hotel" id="hotel" checked>
+                <label>Гостиница</label>
               </li>
               <li>
-                <img src="img/checkbox-on.svg" width="23" height="23" alt="Мотель">
-                <p>Мотель</p>
+                <input type="checkbox" name="motel" id="motel" checked>
+                <label>Мотель</label>
               </li>
               <li>
-                <img src="img/checkbox-on.svg" width="23" height="23" alt="Апартаменты">
-                <p>Апартаменты</p>
+                <input type="checkbox" name="apartments" id="apartments" checked>
+                <label>Апартаменты</label>
               </li>
             </ul>
-          </li>
-        </ul>
+          </fieldset>
+          <fieldset>
+            <legend>Стоимость в сутки(р):</legend>
+            <p>
+              <input type="number" name="priceMin" id="priceMin" min="0" max="3000" value="0">
+              <input type="number" name="priceMax" id="priceMax" min="0" max="3000" value="3000"><br>
+              <output name="price" for="rangeCost"></output>
+              <input type="range" name="rangeCost" id="rangeCost" max="3000"><br>
+              <button type="button">Показать</button>
+            </p>
+          </fieldset>
+        </form>
+        <div>
+          <a href="">Найдено: 3</a>
+          <p>Сортировка:</p>
+          <ul>
+            <li><a href="">По цене</a></li>
+            <li><a href="">По типу</a></li>
+            <li><a href="">По рейтингу</a></li>
+          </ul>
+        </div>
       </section>
-      <section>
-        <p>Стоимость в сутки(Р):</p> <br>
-        <p>От 0 до 3000</p>
-        <img src="img/filter-button.svg" width="23" height="23" alt="Фильтр">
-        <img src="img/filter-button.svg" width="23" height="23" alt="Фильтр"> <br>
-        <button type="button">Показать</button>
-      </section>
-      <div>
-        <a href="">Найдено: 3</a>
-        <p>Сортировка:</p>
-        <ul>
-          <li><a href="">По цене</a></li>
-          <li><a href="">По типу</a></li>
-          <li><a href="">По рейтингу</a></li>
-        </ul>
-      </div>
       <section>
         <ul>
           <li> 

@@ -106,16 +106,34 @@
       </div>
     </footer>
     <section>
-      <h2>Поиск гостиницы в Седоне</h2>
-      <p>Дата заезда:
-        <img src="img/calendar.svg" width="21" height="23" alt="Календарь"> 
-      </p>
-      <p>Дата выезда
-        <img src="img/calendar.svg" width="21" height="23" alt="Календарь">:
-      </p>
-      <p>Взрослые:</p>
-      <p>Дети:</p>
-      <button type="button">Найти</button>
+      <form action="https://echo.htmlacademy.ru/courses" method="post">
+        <fieldset>
+          <legend>Поиск гостиницы в Седоне</legend>
+          <fieldset>
+            <p>
+              <label for="date">Дата заезда:</label>
+              <input type="text" name="date" id="date" placeholder="Введите дату заезда" value="24 апреля 2017">
+              <input type="image" src="img/calendar.svg" width="21" height="23" alt="Календарь"> 
+            </p>
+            <p>
+              <label for="dateback">Дата выезда:</label>
+              <input type="text" name="date" id="dateback" placeholder="Введите дату выезда" value="4 июля 2017">
+              <input type="image" src="img/calendar.svg" width="21" height="23" alt="Календарь"> 
+            </p>
+          </fieldset>
+          <fieldset>
+            <p>
+              <label for="numberAdolt">Взрослые:</label>
+              <input type="number" name="numberAdolt" id="numberAdolt" min="0" value="2">
+            </p>
+            <p>
+              <label for="numberAdolt">Дети:</label>
+              <input type="number" name="numberKids" id="numberKids" min="0" value="0">
+            </p>
+          </fieldset>
+          <button type="button">Найти</button>
+        </fieldset>
+      </form>
     </section>
   </body>
 </html>
