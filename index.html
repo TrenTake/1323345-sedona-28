@@ -10,7 +10,7 @@
     <header>
       <nav>
         <a href="index.html">
-          <img src="img/logo-sedona.svg" width="138px" height="70px" alt="Логотип SEDONA">
+          <img src="img/logo-sedona.svg" width="138" height="70" alt="Логотип SEDONA">
         </a>
         <ul>
           <li>
@@ -29,7 +29,7 @@
       </nav>
     </header>
     <main>
-      <img src="img/intro-welcome.svg" width="456.65" height="350.88" alt="Добро пожаловать в Седону!">
+      <img src="img/intro-welcome.svg" width="456" height="351" alt="Добро пожаловать в Седону!">
       <p>Седона - небольшой городок в Аризоне, <br>
           заслуживающий большего!</p>
       <section>
@@ -100,38 +100,45 @@
         </ul>
       <div>
         <p>Website by
-          <a href="https://htmlacademy.ru">
+          <a href="https://htmlacademy.ru/intensive/htmlcss">
           </a>
         </p>
       </div>
     </footer>
     <section>
+      <div>
+        <button type="button" id="searchHotel">Поиск гостиницы в Седоне</button>
+      </div>
       <form action="https://echo.htmlacademy.ru/courses" method="post">
         <fieldset>
-          <legend>Поиск гостиницы в Седоне</legend>
+          <legend class="visually-hidden">Поиск гостиницы в Седоне</legend>
           <fieldset>
             <p>
               <label for="date">Дата заезда:</label>
               <input type="text" name="date" id="date" placeholder="Введите дату заезда" value="24 апреля 2017">
-              <input type="image" src="img/calendar.svg" width="21" height="23" alt="Календарь"> 
+              <input type="button" name="calendar" id="calendar" value="Календарь">
             </p>
             <p>
               <label for="dateback">Дата выезда:</label>
-              <input type="text" name="date" id="dateback" placeholder="Введите дату выезда" value="4 июля 2017">
-              <input type="image" src="img/calendar.svg" width="21" height="23" alt="Календарь"> 
+              <input type="text" name="dateback" id="dateback" placeholder="Введите дату выезда" value="4 июля 2017">
+              <input type="button" name="calendar" id="calendarBack" value="Календарь">
             </p>
           </fieldset>
           <fieldset>
             <p>
               <label for="numberAdolt">Взрослые:</label>
+              <input type="button" name="minusAdolt" id="minusAdolt" value="-">
               <input type="number" name="numberAdolt" id="numberAdolt" min="0" value="2">
+              <input type="button" name="plusAdolt" id="plusAdolt" value="+">
             </p>
             <p>
               <label for="numberAdolt">Дети:</label>
+              <input type="button" name="minusKids" id="minusKids" value="-">
               <input type="number" name="numberKids" id="numberKids" min="0" value="0">
+              <input type="button" name="plusKids" id="plusKids" value="+">
             </p>
           </fieldset>
-          <button type="button">Найти</button>
+          <input type="submit" name="search" id="search" value="Найти">
         </fieldset>
       </form>
     </section>

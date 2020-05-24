@@ -30,21 +30,21 @@
     </header>
     <main>
       <section>
-        <form action="https://echo.htmlacademy.ru/courses" method="get" oninput="priceMax.value=rangeCost.value">
+        <form action="https://echo.htmlacademy.ru/courses" method="get">
           <fieldset>
             <legend>Инфраструктура:</legend>
             <ul>
               <li>
-                <input type="checkbox" name="swimmingpool" id="swimmingpool" checked>
-                <label for="swimmingpool">Бассейн</label>
+                <input type="checkbox" name="swimmingPool" id="swimmingPool" value="Бассейн" checked>
+                <label for="swimmingPool">Бассейн</label>
               </li>
               <li>
-                <input type="checkbox" name="parking" id="parking">
+                <input type="checkbox" name="parking" id="parking" value="Парковка">
                 <label for="parking">Парковка</label>
               </li>
               <li>
-                <input type="checkbox" name="wi-fi" id="wi-fi">
-                <label>Wi-Fi</label>
+                <input type="checkbox" name="wi-fi" id="wi-fi" value="Wi-Fi">
+                <label for="wi-fi">Wi-Fi</label>
               </li>
             </ul>
           </fieldset>
@@ -52,16 +52,16 @@
             <legend>Тип жилья:</legend>
             <ul>
               <li>
-                <input type="checkbox" name="hotel" id="hotel" checked>
-                <label>Гостиница</label>
+                <input type="checkbox" name="hotel" id="hotel" value="Гостиница" checked>
+                <label for="hotel">Гостиница</label>
               </li>
               <li>
-                <input type="checkbox" name="motel" id="motel" checked>
-                <label>Мотель</label>
+                <input type="checkbox" name="motel" id="motel" value="Мотель" checked>
+                <label for="motel">Мотель</label>
               </li>
               <li>
-                <input type="checkbox" name="apartments" id="apartments" checked>
-                <label>Апартаменты</label>
+                <input type="checkbox" name="apartments" id="apartments" value="Апартаменты" checked>
+                <label for="apartments">Апартаменты</label>
               </li>
             </ul>
           </fieldset>
@@ -72,7 +72,7 @@
               <input type="number" name="priceMax" id="priceMax" min="0" max="3000" value="3000"><br>
               <output name="price" for="rangeCost"></output>
               <input type="range" name="rangeCost" id="rangeCost" max="3000"><br>
-              <button type="button">Показать</button>
+              <input type="submit" name="showButton" id="showButton" value="Показать">
             </p>
           </fieldset>
         </form>
@@ -80,9 +80,15 @@
           <a href="">Найдено: 3</a>
           <p>Сортировка:</p>
           <ul>
-            <li><a href="">По цене</a></li>
-            <li><a href="">По типу</a></li>
-            <li><a href="">По рейтингу</a></li>
+            <li>
+              <a href="">По цене</a>
+            </li>
+            <li>
+              <a href="">По типу</a>
+            </li>
+            <li>
+              <a href="">По рейтингу</a>
+            </li>
           </ul>
         </div>
       </section>
@@ -136,7 +142,7 @@
         </ul>
       <div>
         <p>Website by
-          <a href="https://htmlacademy.ru">
+          <a href="https://htmlacademy.ru/intensive/htmlcss">
           </a>
         </p>
       </div>
