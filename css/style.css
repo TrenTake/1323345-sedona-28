@@ -72,10 +72,14 @@ img {
 }
 
 .visually-hidden {
-  visibility: hidden;
-  position: absolute;
-  overflow: hidden;
-  padding: 0;
+	position: absolute !important;
+	clip: rect(1px 1px 1px 1px);
+	clip: rect(1px, 1px, 1px, 1px);
+	padding:0 !important;
+	border:0 !important;
+	height: 1px !important; 
+	width: 1px !important; 
+	overflow: hidden;
 }
 
 .five-reasons {
@@ -92,7 +96,7 @@ img {
   font-size: 21px;
 }
 
-.discription-city {
+.description-city {
   color: var(--basicWhite);
 }
 
@@ -118,13 +122,11 @@ img {
   background-color: var(--basicBrown);
   text-transform: inherit;
   width: 568px;
-  height: 86px;
   font-family: inherit;
   text-align: center;
 }
 
-.date, 
-.age {
+.date-age {
   color: var(--basicBlack);
   font-weight: 700;
   line-height: 26px;
@@ -140,7 +142,6 @@ img {
   border: none;
   background-color: var(--lightBlue);
   width: 458px;
-  height: 58px;
   text-align: center;
   vertical-align: middle;
 }
