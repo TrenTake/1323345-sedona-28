@@ -12,6 +12,16 @@
   --gray-ranked: #666666;
   --gray-point: #ABABAB;
   --gray-arrow: #CACACA;
+  --hover-brown: #604E43;
+  --dark-brown: #503E33;
+  --basic-blue: #669EC0;
+  --dark-blue: #5496BD;
+  --line-gray: #E5E5E5;
+  --hover-blue: #669EC0;
+  --active-blue: #5496BD;
+  --hover-gray: #EBEBEB;
+  --border-white: #E5E5E5;
+  --menu-current-color: #766357;
 }
 
 body {
@@ -23,7 +33,7 @@ body {
   font-weight: 400;
   color: var(--light-black);
   text-transform: lowercase;
-  background-color: var(--dark-gray);
+  background-color: var(--light-gray);
   background-position: top center;
   background-repeat: no-repeat;
 }
@@ -32,9 +42,21 @@ a {
   text-decoration: none;
 }
 
+.page-container {
+  width: 1200px;
+  margin: 0 auto;
+  background-color: var(--basic-white);
+}
+
 img {
   max-width: 100%;
   height: auto;
+}
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .main-navigation {
@@ -53,7 +75,8 @@ img {
 }
 
 .site-navigation {
-  width: 1200px;
+  padding-right: 72px;
+  padding-left: 72px;
   margin: 0;
   padding-top: 15px;
   padding-bottom: 15px;
@@ -89,8 +112,7 @@ img {
   color: var(--basic-black);
 }
 
-.about-sedona, 
-.visit-sedona, 
+.about-sedona,
 .tel,
 .found {
   font-size: 21px;
@@ -98,6 +120,11 @@ img {
   font-weight: 700;
   text-align: center;
   color: var(--basic-black);
+}
+
+.about-sedona {
+  margin-top: 42px;
+  margin-bottom: 16px;
 }
 
 .visually-hidden {
@@ -114,11 +141,20 @@ img {
 .five-reasons {
   line-height: 26px;
   text-align: center;
+  margin-bottom: 51px;
 }
 
 .in-city {
   color: var(--basic-white);
   font-size: 21px;
+}
+
+.blue-block {
+  background-color: var(--light-blue);
+  width: 400px;
+  text-align: center;
+  padding-top: 47px;
+  padding-bottom: 54px;
 }
 
 .description-city {
@@ -129,6 +165,8 @@ img {
   font-weight: 700;
   font-size: 21px;
   color: var(--basic-black);
+  margin-top: 30px;
+  margin-bottom: 25px;
 }
 
 .interested {
@@ -137,6 +175,11 @@ img {
   color: var(--basic-black);
   font-weight: 700;
   text-align: center;
+}
+
+.deal {
+  text-align: center;
+  margin-bottom: 60px;
 }
 
 .search-hotel {
@@ -150,6 +193,9 @@ img {
   width: 568px;
   font-family: inherit;
   text-align: center;
+  margin: 0 auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .date-age {
@@ -157,6 +203,45 @@ img {
   font-weight: 700;
   line-height: 26px;
   text-transform: inherit;
+  border: 0;
+  background-color: var(--light-gray);
+  width: 100%;
+}
+
+.people-input {
+  text-align: center;
+}
+
+.label-in-form {
+  color: var(--basic-black);
+  font-weight: 700;
+  line-height: 26px;
+}
+
+.people-label {
+  padding-left: 55px;
+  padding-right: 11px;
+}
+
+.first-label {
+  padding-right: 6px;
+}
+
+.second-label {
+  padding-right: 6px;
+}
+
+.first-group {
+  padding-top: 55px;
+  padding-bottom: 30px;
+  padding-left: 55px;
+  padding-right: 50px;
+}
+
+.second-group {
+  padding-bottom: 30px;
+  padding-left: 54px;
+  padding-right: 45px;
 }
 
 .search {
@@ -168,21 +253,46 @@ img {
   border: none;
   background-color: var(--light-blue);
   width: 458px; 
-  text-align: center;
-  vertical-align: middle;
+  margin-top: 54px;
+  margin-bottom: 55px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.visit-sedona {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  color: var(--basic-black);
+  padding-top: 23px;
+  padding-bottom: 9px;
+  padding-left: 40px;
 }
 
 .footer-contacts {
   list-style: none;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 52px 52px 52px;
+  padding: 0;
+  margin: 0;
 }
 
 .social {
   background-color: var(--light-blue);
   background-position: center;
   background-repeat: no-repeat, repeat;
-  position: absolute;
   width: 46px;
   height: 48px;
+  display: block;
+}
+
+.social:hover {
+  background-color: var(--hover-blue);
+}
+
+.social:active {
+  background-color: var(--active-blue);
 }
 
 .twitter {
@@ -205,6 +315,8 @@ img {
 .website-by {
   line-height: 26px;
   color: var(--basic-black);
+  display: flex;
+  align-items: center;
 }
 
 .main-background {
@@ -212,8 +324,14 @@ img {
   width: 1200px;
   height: 509px;
   text-align: center;
-  margin-left: 10%;
-  margin-right: 10%;
+}
+
+.intro-welcome {
+  margin-top: 71px;
+}
+
+.city-art {
+  background-image: url("../img/city.jpg");
 }
 
 .top-section {
@@ -229,6 +347,11 @@ img {
 .price-in-day {
   font-size: 16px;
   font-weight: 700;
+}
+
+.price-in-day {
+  text-align: start;
+  padding-bottom: 11px;
 }
 
 .checkbox-list,
@@ -247,12 +370,29 @@ img {
 
 .sort-list {
   list-style: none;
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+}
+
+.sort-container {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--line-gray);
+}
+
+.found {
+  width: 117px;
+  margin-top: 29px;
+  margin-left: 73px;
+  padding: 0;
 }
 
 .sorting {
   font-size: 12px;
   line-height: 18px;
   color: var(--basic-black);
+  margin-left: 46px;
 }
 
 .sort-by-type,
@@ -276,6 +416,8 @@ img {
   line-height: 26px;
   font-weight: 700;
   color: var(--basic-black);
+  margin: 0;
+  padding: 0;
 }
 
 .type-hotel {
@@ -287,6 +429,9 @@ img {
   color: var(--basic-white);
   background-color: var(--light-blue);
   border: none;
+  width: 110px;
+  padding: 3px 16px 3px 17px;
+  margin-right: 6px;
 }
 
 .reservation {
@@ -294,6 +439,8 @@ img {
   color: var(--basic-white);
   background-color: var(--basic-brown);
   border: none;
+  width: 142px;
+  padding: 3px 17px 3px 16px;
 }
 
 .rating {
@@ -302,6 +449,8 @@ img {
   width: 110px;
   height: 27px;
   text-align: center;
+  margin-right: 73px;
+  margin-top: 43px;
 }
 
 .page {
@@ -313,21 +462,6 @@ img {
   display: grid;
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
-}
-
-.main-header {
-  margin-bottom: 70px;
-}
-
-.main-navigation-wrapper {
-  width: 100%;
-  background-color: var(--basic-white);
-}
-
-.container {
-  width: 1200px;
-  margin: 0 auto;
-  padding: 0 10px;
 }
 
 .advantages-list {
@@ -349,7 +483,6 @@ img {
 .in-city,
 .really {
   width: 100%;
-  padding-left: 20px;
 }
 
 .feature-item p {
@@ -362,24 +495,388 @@ img {
 }
 
 .footer-info {
+  padding-left: 111px;
+  padding-bottom: 36px;
   grid-column-start: 1;
-  grid-column-end: 1;
+  grid-column-end: 2;
 }
 
 .footer-contacts {
   grid-column-start: 2;
-  grid-column-end: 2;
+  grid-column-end: 3;
+  padding-top: 36px;
+  padding-bottom: 36px;
 }
 
 .footer-website-by {
   grid-column-start: 3;
-  grid-column-end: 3;
+  grid-column-end: 4;
+  margin-top: 30px;
 }
 
-/* У меня есть несколько вопросов касательно футера. Почему-то отображается на странице только ютуб, в чем проблема? 
-   Телефон в футере не отображается в середине, я пыталась писать: 
-   .tel a {
-     text-align: center;
-   }
-   но это на работает, как меня разместить телефон по центру? И как мне лучше отобразить лого HTMLAcademy?
-*/
+.map {
+  position: relative;
+}
+
+.form-search {
+  position: absolute;
+  background-color: var(--basic-white);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 568px;
+  text-align: center;
+}
+
+.academy-logo {
+  width: 115px;
+  height: 41px;
+}
+
+.container-for-image {
+  display: flex;
+}
+
+.container-for-image:last-child {
+  flex-direction: row-reverse;
+}
+
+.gray-block {
+  background-color: var(--basic-gray);
+  margin-bottom: 58px;
+}
+
+.characteristics {
+  padding-top: 47px;
+}
+
+.description-characteristics {
+  padding-top: 23px;
+  padding-bottom: 54px;
+  box-sizing: border-box;
+}
+
+.item-icons {
+  padding-top: 60px;
+}
+
+.description-categories {
+  padding-bottom: 82px;
+}
+
+.fieldset-search {
+  border: 0;
+}
+
+.calendar {
+  border: 0;
+}
+
+.search-hotel:hover {
+  background-color: var(--hover-brown);
+}
+
+.search-hotel:active {
+  background-color: var(--dark-brown);
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.search:hover {
+  background-color: var(--basic-blue);
+}
+
+.search:active {
+  background-color: var(--dark-blue);
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.minus-plus {
+  color: var(--gray);
+  background-color: var(--light-gray);
+  border: 0;
+  position: absolute;
+  top: 0;
+}
+.minus-plus:hover {
+  color: var(--basic-black);
+}
+
+.minus-plus:active {
+  color: var(--light-blue);
+}
+
+.catalog-container {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--line-gray);
+  padding-top: 30px;
+}
+
+.about-hotel {
+  display: flex;
+  align-items: center;
+  padding-bottom: 30px;
+}
+
+.image-hotel {
+  margin-right: 29px;
+  width: 135px;
+  height: 90px;
+}
+
+.container-hotel {
+  flex-wrap: wrap;
+}
+
+.inside-hotel {
+  display: flex;
+}
+
+.copyright-link:hover .academy-logo {
+  fill: var(--light-blue);
+}
+
+.copyright-link .academy-logo:active {
+  fill: var(--gray);
+}
+
+.fieldset-group {
+  display: flex;
+  align-items: center;
+}
+
+.group-inside {
+  display: flex;
+}
+
+.second {
+  width: 114px;
+}
+
+.input-wrapper {
+  position: relative;
+  width: 346px;
+}
+
+.input-second-wrapper {
+  position: relative;
+  width: 114px;
+}
+
+.calendar {
+  position: absolute;
+  fill: var(--gray);
+  outline: none;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  right: 0;
+}
+
+.calendar:hover {
+  fill: var(--basic-black);
+}
+
+.calendar:active {
+  fill: var(--light-blue);
+}
+
+.group-inside {
+  display: flex;
+}
+
+.filter-item {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.range-filter {
+  width: 316px;
+}
+
+.range-controls {
+  position: relative;
+  height: 80px;
+  padding-top: 39px;
+  height: 41px;
+  padding-right: 20px;
+  padding-left: 20px;
+  border-radius: 5px;
+}
+
+.range-controls .scale {
+  height: 2px;
+  background: #d7dcde;
+}
+
+.range-controls .bar {
+  width: 80%;
+  height: 2px;
+  background: var(--basic-white);
+}
+
+.range-controls .toggle {
+  position: absolute;
+  top: 31px;
+  left: 0;
+  width: 4px;
+  height: 4px;
+  padding: 0;
+  border: 8px solid #ffffff;
+  background-color: var(--gray-point);
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 #cfcfcf;
+  cursor: pointer;
+}
+
+.range-controls .toggle-min {
+  left: 18px;
+}
+
+.range-controls .toggle-max {
+  left: 230px;
+}
+
+.price-controls {
+  border: 2px solid var(--basic-white);
+  display: flex;
+  justify-content: space-between;
+  width: 317px;
+  height: 36px;
+  align-items: center;
+  position: relative;
+  border-radius: 2px;
+  box-sizing: border-box;
+}
+
+.price-controls::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  width: 2px;
+  height: 22px;
+  background-color: var(--basic-white);
+}
+
+.fieldset-checkbox {
+  border: none;
+}
+
+.form-catalog {
+  display: flex;
+  justify-content: space-around;
+}
+
+.input-price {
+  color: var(--basic-white);
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  width: 50px;
+}
+
+.min-price {
+  padding-left: 52px;
+}
+
+.max-price {
+  padding-right: 25px;
+}
+
+.date-age:hover {
+  background-color: var(--hover-gray);
+}
+
+.date-age:focus {
+  background-color: var(--basic-white);
+  border: 2px solid var(--border-white);
+  box-sizing: border-box;
+}
+
+.name-hotel:hover {
+  color: var(--light-blue);
+}
+
+.name-hotel:active {
+  mix-blend-mode: normal;
+  opacity: 0.3;
+}
+
+.reservation:hover {
+  background-color: var(--hover-brown);
+}
+
+.reservation:active {
+  background-color: var(--dark-brown);
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.details:hover {
+  background-color: var(--hover-blue);
+}
+
+.details:active {
+  background-color: var(--active-blue);
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.menu-item a:hover {
+  color: var(--light-blue);
+}
+
+.menu-item a:active {
+  mix-blend-mode: normal;
+  opacity: 0.3;
+}
+
+.menu-item a:not([href]) {
+  color: var(--menu-current-color);
+}
+
+.show-button:hover {
+  background-color: var(--basic-white);
+  color: var(--basic-black);
+}
+
+.sort-item a:hover {
+  color: var(--light-blue);
+}
+
+.sort-item a:active {
+  color: var(--basic-black);
+}
+
+.categories-catalog, .price-in-day {
+  padding-top: 15px;
+}
+
+.for-arrows {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.arrows {
+  display: flex;
+  padding-right: 73px;
+}
+
+.arrow {
+  fill: var(--gray-arrow);
+}
+
+.first-arrow {
+  padding-right: 12px;
+}
+
+.arrow:hover {
+  fill: var(--basic-black);
+}
+
+.arrow:active {
+  fill: var(--light-blue);
+}
