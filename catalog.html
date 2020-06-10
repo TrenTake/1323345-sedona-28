@@ -37,34 +37,40 @@
             <fieldset class="fieldset-checkbox">
               <legend class="categories-catalog infrastructure">Инфраструктура:</legend>
               <ul class="checkbox-list">
-                <li>
-                  <input type="checkbox" name="swimming-pool" id="swimming-pool" value="Бассейн" checked>
-                  <label for="swimming-pool">Бассейн</label>
+                <li class="filter-input">
+                  <input class="filter-input-checkbox option" type="checkbox" name="swimming-pool" id="swimming-pool" value="Бассейн" checked>
+                  <span class="checkbox-span"></span>
+                  <label for="swimming-pool" class="check">Бассейн</label>
                 </li>
-                <li>
-                  <input type="checkbox" name="parking" id="parking" value="Парковка">
-                  <label for="parking">Парковка</label>
+                <li class="filter-input">
+                  <input class="filter-input-checkbox option" type="checkbox" name="parking" id="parking" value="Парковка">
+                  <span class="checkbox-span"></span>
+                  <label for="parking" class="check">Парковка</label>
                 </li>
-                <li>
-                  <input type="checkbox" name="wi-fi" id="wi-fi" value="Wi-Fi">
-                  <label for="wi-fi">Wi-Fi</label>
+                <li class="filter-input">
+                  <input class="filter-input-checkbox option" type="checkbox" name="wi-fi" id="wi-fi" value="Wi-Fi" disabled>
+                  <span class="checkbox-span"></span>
+                  <label for="wi-fi" class="check">Wi-Fi</label>
                 </li>
               </ul>
             </fieldset>
             <fieldset class="fieldset-checkbox">
               <legend class="categories-catalog type-house">Тип жилья:</legend>
               <ul class="checkbox-list">
-                <li>
-                  <input type="checkbox" name="hotel" id="hotel" value="Гостиница" checked>
-                  <label for="hotel">Гостиница</label>
+                <li class="filter-input">
+                  <input class="filter-input-checkbox option" type="checkbox" name="hotel" id="hotel" value="Гостиница" checked>
+                  <span class="checkbox-span"></span>
+                  <label for="hotel" class="check">Гостиница</label>
                 </li>
-                <li>
-                  <input type="checkbox" name="motel" id="motel" value="Мотель" checked>
-                  <label for="motel">Мотель</label>
+                <li class="filter-input">
+                  <input class="filter-input-checkbox option" type="checkbox" name="motel" id="motel" value="Мотель" checked>
+                  <span class="checkbox-span"></span>
+                  <label for="motel" class="check">Мотель</label>
                 </li>
-                <li>
-                  <input type="checkbox" name="apartments" id="apartments" value="Апартаменты" checked>
-                  <label for="apartments">Апартаменты</label>
+                <li class="filter-input">
+                  <input class="filter-input-checkbox option" type="checkbox" name="apartments" id="apartments" value="Апартаменты" checked disabled>
+                  <span class="checkbox-span"></span>
+                  <label for="apartments" class="check">Апартаменты</label>
                 </li>
               </ul>
             </fieldset>
@@ -84,8 +90,8 @@
                     <div class="bar">
                     </div>
                   </div>
-                  <div class="toggle toggle-min" tabindex="0"></div>
-                  <div class="toggle toggle-max" tabindex="0"></div>
+                  <button type="button" class="toggle toggle-min" aria-label="Минимальная цена"></button>
+                  <button type="button" class="toggle toggle-max" aria-label="Максимальная цена"></button>
                 </div>
               </div>
               <button type="submit" name="show-button" id="show-button" class="show-button">Показать</button>
@@ -100,23 +106,23 @@
               <li class="sort-item">
                 <a href="" class="sort-by-price">По цене</a>
               </li>
-              <li class="sort-item">
+              <li class="sort-item with-border">
                 <a href="" class="sort-by-type">По типу</a>
               </li>
-              <li class="sort-item">
+              <li class="sort-item with-border">
                 <a href="" class="sort-by-rait">По рейтингу</a>
               </li>
             </ul>
             <ul class="list-reset arrows">
               <li>
-                <a>
+                <a href="#">
                   <svg xmlns="http://www.w3.org/2000/svg"  class="arrow first-arrow" width="11" height="10" viewBox="0 0 11 10">
                     <path d="M5.5 0L0 10h11z"/>
                   </svg>
                 </a>
               </li>
               <li>
-                <a>
+                <a href="#">
                   <svg xmlns="http://www.w3.org/2000/svg"  class="arrow" width="11" height="10" viewBox="0 0 11 10">
                     <path d="M5.5 10L0 0h11"/>
                   </svg>
@@ -138,11 +144,11 @@
                     <div class="inside-hotel">
                       <div class="side-left">
                         <p class="type-hotel">Гостиница</p>
-                        <a href="" class="details">Подробнее</a>
+                        <a href="" class="button-inside details">Подробнее</a>
                       </div>
                       <div class="side-right">
                         <p>от 4000 Р.</p>
-                        <a href="" class="reservation">Забронировать</a>
+                        <a href="" class="button-inside reservation">Забронировать</a>
                       </div>
                     </div>
                   </div>
@@ -164,11 +170,11 @@
                     <div class="inside-hotel">
                       <div class="side-left">
                         <p class="type-hotel">Мотель</p>
-                        <a href="" class="details">Подробнее</a>
+                        <a href="" class="button-inside details">Подробнее</a>
                       </div>
                       <div class="side-right">
                         <p>от 3000 Р.</p>
-                        <a href="" class="reservation">Забронировать</a>
+                        <a href="" class="button-inside reservation">Забронировать</a>
                       </div>
                     </div>
                   </div>
@@ -190,11 +196,11 @@
                     <div class="inside-hotel">
                       <div class="side-left">
                         <p class="type-hotel">Апартаменты</p>
-                        <a href="" class="details">Подробнее</a>
+                        <a href="" class="button-inside details">Подробнее</a>
                       </div>
                       <div class="side-right">
                         <p>от 2000 Р.</p>
-                        <a href="" class="reservation">Забронировать</a>
+                        <a href="" class="button-inside reservation">Забронировать</a>
                       </div>
                     </div>
                   </div>
@@ -210,18 +216,30 @@
       </main>
       <footer class="page-footer">
         <div class="footer-info">
-          <h2 class="visit-sedona">#VISITSEDONA</h2>
+          <h2 class="hashtag">#VISITSEDONA</h2>
           <a href="tel:+74956660166" class="tel">Тел: +7(495)666-01-66</a>
         </div>
         <ul class="footer-contacts">
-          <li class="social twitter">
-            <a href="#" aria-label="Твиттер"></a>
+          <li>
+            <a class="social" href="#" aria-label="Твиттер">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="social-icon" width="17" height="15" viewBox="0 0 17 15">
+                <path fill="#FFF" d="M10.95.144c1.685-.496 2.984.27 3.577 1.179.673-.231 1.331-.481 2.011-.708a2.345 2.345 0 0 1-.857 1.768c.685.17 1.304-.491 1.304-.491-.169 1-1.006 1.788-1.563 2.024-.231 6.75-3.175 11.217-10.077 11.082h-.446c-.41 0-4.164-.46-4.898-1.887 2.271.196 3.893-.422 4.693-1.177-.96-.3-2.679-.477-2.979-2.95.349.106.564.228 1.19.119C1.705 8.247.374 7.53.448 5.33c.285.328 1.067.536 1.34.472C1.085 5.561-.182 2.442.894.85c1.818 1.854 3.735 3.606 7.152 3.773C8.254 2.33 9.183.793 10.95.144z"/>
+              </svg>
+            </a>
           </li>
-          <li class="social facebook">
-            <a href="#" aria-label="Фейсбук"></a>
+          <li>
+            <a class="social" href="#" aria-label="Фейсбук">
+              <svg xmlns="http://www.w3.org/2000/svg" class="social-icon" width="12" height="22" viewBox="0 0 12 22">
+                <path fill="#FFF" d="M12 4V0H8a4 4 0 0 0-4 4v4H0v4h4v10h4V12h4V8H8V4h4z"/>
+              </svg>
+            </a>
           </li>
-          <li class="social youtube">
-            <a href="#" aria-label="Ютуб"></a>
+          <li>
+            <a class="social" href="#" aria-label="Ютуб">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="social-icon" width="20" height="16" viewBox="0 0 20 16">
+                <path fill="#FFF" d="M17 0H3C1.35 0 0 1.35 0 3v10c0 1.65 1.35 3 3 3h14c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3zM6.027 11.998V4.002L15.014 8l-8.987 3.998z"/>
+              </svg>
+            </a>
           </li>
         </ul>
         <div class="footer-website-by">
