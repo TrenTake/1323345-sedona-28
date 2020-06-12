@@ -70,10 +70,11 @@ img {
 .main-header-logo {
   width: 138px;
   height: 70px;
-  position: absolute;
+  position: absolute; 
   top: 0;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 1;
 }
 
 .site-navigation {
@@ -112,6 +113,29 @@ img {
 .site-navigation a:focus {
   background-color: var(--basic-white);
   color: var(--basic-black);
+}
+
+.main-background {
+  background-color: var(--basic-black);
+  background-image: url("../img/main-background.jpg");
+  width: 1200px;
+  height: 509px;
+  text-align: center;
+  position: relative;
+}
+
+.main-background::after {
+  content: "";
+  display: block;
+  bottom: -1px;
+  position: absolute;
+  width: 1200px;
+  height: 57px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='59' preserveAspectRatio='none' viewBox='0 0 1200 59'%3E%3Cpath d='M0 57V0l250 24V0l350 57L950 0v24l250-24v57H0z' fill='%23fff'/%3E%3C/svg%3E%0A");
+}
+
+.intro-welcome {
+  margin-top: 71px;
 }
 
 .about-sedona,
@@ -327,18 +351,6 @@ img {
   align-items: center;
 }
 
-.main-background {
-  background-color: var(--basic-black);
-  background-image: url("../img/main-background.jpg");
-  width: 1200px;
-  height: 509px;
-  text-align: center;
-}
-
-.intro-welcome {
-  margin-top: 71px;
-}
-
 .city-art {
   background-image: url("../img/city.jpg");
 }
@@ -386,7 +398,12 @@ img {
 
 .checkbox-icon {
   fill: var(--basic-white);
-  padding-right: 15px;
+  margin-right: 15px;
+}
+
+.check {
+  display: flex;
+  align-items: center;
 }
 
 .filter-input-checkbox:checked + .checkbox-icon .checkbox-on {
@@ -699,40 +716,6 @@ img {
   width: 12px;
 }
 
-/*
-.minus::before {
-  position: absolute;
-  margin-left: 10px;
-  content: "";
-  display: block;
-  width: 12px;
-  height: 3px;
-  background-color: var(--gray);
-}
-
-.plus::before,
-.plus::after {
-  content: "";
-  position: absolute;
-  background-color: var(--gray);
-}
-
-.plus::before {
-  left:50%;
-  top:14px;
-  bottom:14px;
-  width:3px;
-  transform:translateX(-50%);
-}
-
-.plus::after {
-  top:50%;
-  left:9px;
-  right:9px;
-  height:3px;
-  transform:translateY(-50%);
-}
-*/
 .button-amount:hover::before,
 .button-amount:hover::after {
   background-color: var(--basic-black);
@@ -1076,14 +1059,4 @@ img {
 
 .one-star {
   width: 18px;
-}
-
-.main-background::after {
-  content: "";
-  display: block;
-  top: 509px;
-  position: absolute;
-  width: 1200px;
-  height: 57px;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='59' preserveAspectRatio='none' viewBox='0 0 1200 59'%3E%3Cpath d='M0 57V0l250 24V0l350 57L950 0v24l250-24v57H0z' fill='%23fff'/%3E%3C/svg%3E%0A");
 }
