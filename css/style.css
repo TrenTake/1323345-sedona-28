@@ -209,6 +209,8 @@ img {
   background-color: var(--light-gray);
   width: 100%;
   min-height: 38px;
+  box-sizing: border-box;
+  border: 2px solid var(--light-gray);
 }
 
 .date-age:first-child {
@@ -326,6 +328,7 @@ img {
 }
 
 .main-background {
+  background-color: var(--basic-black);
   background-image: url("../img/main-background.jpg");
   width: 1200px;
   height: 509px;
@@ -341,6 +344,7 @@ img {
 }
 
 .top-section {
+  background-color: var(--basic-black);
   background-image: url("../img/background.jpg");
   width: 1200px;
   height: 217px;
@@ -366,41 +370,43 @@ img {
 }
 
 .catalog-list {
-  margin-top: 0;
+  margin: 0;
   position: relative;
   padding-left: 73px;
 }
 
-.checkbox-list {
+.checkbox-list li {
   text-align: start;
+  padding-bottom: 25px;
 }
 
-.filter-input-checkbox {
-  position: absolute;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+.checkbox-list {
+  padding: 0;
+}
+
+.checkbox-icon {
+  fill: var(--basic-white);
+  padding-right: 15px;
+}
+
+.filter-input-checkbox:checked + .checkbox-icon .checkbox-on {
+  opacity: 1;
+}
+
+.filter-input-checkbox:checked + .checkbox-icon .checkbox-off {
+  opacity: 0;
+}
+
+.filter-input-checkbox + .checkbox-icon .checkbox-on {
+  opacity: 0;
+}
+
+.filter-input-checkbox + .checkbox-icon .checkbox-off {
+  opacity: 1;
 }
 
 .type-house {
   text-align: start;
-}
-
-.first-checkbox-icon,
-.second-checkbox-icon {
-  position: absolute;
-}
-
-.first-checkbox-icon {
-  margin-left: -40px;
-}
-
-.second-checkbox-icon {
-  margin-left: -40px;
-}
-
-.filter-input {
-  padding-bottom: 25px;
 }
 
 .show-button {
@@ -572,6 +578,8 @@ img {
 }
 
 .map {
+  background-color: var(--basic-black);
+  background-image: url("../img/map.png");
   position: relative;
 }
 
@@ -654,7 +662,7 @@ img {
   color: rgba(255, 255, 255, 0.3);
 }
 
-.minus-plus {
+.button-amount {
   color: var(--gray);
   background-color: var(--light-gray);
   border: 0;
@@ -665,10 +673,33 @@ img {
   margin: 0;
 }
 
-.minus-plus:nth-of-type(2) {
+.button-amount:nth-of-type(2) {
   right: 0;
 }
 
+.button-amount::before,
+.button-amount::after {
+  content: "";
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  background-color: var(--gray);
+}
+
+.plus::before {
+  height: 12px;
+  width:3px;
+}
+
+.plus::after,
+.minus::after {
+  height: 3px;
+  width: 12px;
+}
+
+/*
 .minus::before {
   position: absolute;
   margin-left: 10px;
@@ -701,15 +732,20 @@ img {
   height:3px;
   transform:translateY(-50%);
 }
+*/
+.button-amount:hover::before,
+.button-amount:hover::after {
+  background-color: var(--basic-black);
+}
 
-.minus-plus:hover {
-  color: var(--basic-black);
+.button-amount:hover,
+.button-amount:active {
   background-color: var(--hover-gray);
 }
 
-.minus-plus:active {
-  color: var(--light-blue);
-  background-color: var(--hover-gray);
+.button-amount:active::before,
+.button-amount:active::after {
+  background-color: var(--light-blue);
 }
 
 .catalog-container {
@@ -806,8 +842,8 @@ img {
 .range-controls {
   position: relative;
   height: 80px;
-  padding-top: 39px;
-  height: 41px;
+  padding-top: 25px;
+  height: 33px;
   padding-right: 20px;
   padding-left: 20px;
   border-radius: 5px;
@@ -826,7 +862,7 @@ img {
 
 .range-controls .toggle {
   position: absolute;
-  top: 30px;
+  top: 16px;
   left: 0;
   width: 4px;
   height: 4px;
@@ -907,13 +943,13 @@ img {
 
 .date-age:hover {
   background-color: var(--hover-gray);
+  border: 2px solid var(--hover-gray);
 }
 
 .date-age:focus {
   background-color: var(--basic-white);
   outline: none;
   border: 2px solid var(--border-white);
-  box-sizing: border-box;
 }
 
 .name-hotel:hover {
@@ -972,7 +1008,7 @@ img {
 }
 
 .categories-catalog, .price-in-day {
-  padding-top: 15px;
+  padding-top: 25px;
 }
 
 .for-arrows {
@@ -1015,6 +1051,7 @@ img {
   height: 17px;
   background-image: url("../img/star.svg");
   background-repeat: repeat;
+  background-repeat: space;
 }
 
 .grade {
@@ -1022,21 +1059,31 @@ img {
 }
 
 .five-stars {
-  width: 90px;
+  width: 95px;
 }
 
 .four-stars {
-  width: 72px;
+  width: 90px;
 }
 
 .three-stars {
-  width: 54px;
+  width: 66px;
 }
 
 .two-stars {
-  width: 36px;
+  width: 42px;
 }
 
 .one-star {
   width: 18px;
+}
+
+.main-background::after {
+  content: "";
+  display: block;
+  top: 509px;
+  position: absolute;
+  width: 1200px;
+  height: 57px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='59' preserveAspectRatio='none' viewBox='0 0 1200 59'%3E%3Cpath d='M0 57V0l250 24V0l350 57L950 0v24l250-24v57H0z' fill='%23fff'/%3E%3C/svg%3E%0A");
 }
