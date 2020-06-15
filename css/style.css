@@ -175,7 +175,24 @@ img {
   font-size: 21px;
 }
 
-.blue-block {
+.counter {
+  counter-reset: list-of-benefits;
+}
+
+.in-city::after,
+.characteristics::after {
+  float: left;
+  padding-top: 25px;
+  padding-bottom: 23px;
+  width: 100%;
+  counter-increment: list-of-benefits;
+  content: "— №" counter(list-of-benefits) " —";
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: normal;
+}
+
+.place {
   background-color: var(--light-blue);
   width: 400px;
   text-align: center;
@@ -550,8 +567,7 @@ img {
 }
 
 .bridge,
-.in-city,
-.really {
+.in-city {
   width: 100%;
 }
 
@@ -598,6 +614,7 @@ img {
   background-color: var(--basic-black);
   background-image: url("../img/map.png");
   position: relative;
+  overflow: hidden;
 }
 
 .live-map {
@@ -613,6 +630,25 @@ img {
   transform: translateX(-50%);
   width: 568px;
   text-align: center;
+  display: none;
+}
+
+.form-show {
+  display: block;
+  animation-duration: 1s;
+  animation-name: bounse;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes bounse {
+  0% {
+    transform: translate(-50%, -100%);
+  }
+
+  100% {
+    transform: translate(-50%, 0);
+  }
 }
 
 .academy-logo {
@@ -1046,7 +1082,7 @@ img {
 }
 
 .four-stars {
-  width: 90px;
+  width: 85px;
 }
 
 .three-stars {

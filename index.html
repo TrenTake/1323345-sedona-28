@@ -42,12 +42,11 @@
           <h2 class="visually-hidden">Преимущества</h2>
           <p class="five-reasons">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
           <ul class="advantages-list">
-            <li>
+            <li class="counter">
               <div class="container-for-image">
-                <div class="blue-block">
-                  <h3 class="in-city really">Настоящий городок</h3>
-                  <p class="description-city really">— №1 —</p>
-                  <p class="description-city really">Седона - не аттракцион для туристов, там<br>
+                <div class="place">
+                  <h3 class="in-city">Настоящий городок</h3>
+                  <p class="description-city">Седона - не аттракцион для туристов, там<br>
                     течёт своя жизнь</p>
                 </div>
                 <img src="img/city.jpg" width="800" height="256" alt="Городок Седона">
@@ -91,9 +90,8 @@
             </li>
             <li class="bridge">
               <div class="container-for-image">
-                <div class="blue-block">
+                <div class="place">
                   <h3 class="in-city">Там есть мост дьявола</h3>
-                  <p class="description-city">— №2 —</p>
                   <p class="description-city">Да, по нему можно пройти! Если конечно<br>вы осмелитесь!</p>
                 </div>
                 <img src="img/bridge.jpg" width="800" height="256" alt="Городок Седона">
@@ -101,17 +99,14 @@
             </li>
             <li class="feature-item additional-advantages">
               <h3 class="categories characteristics">Небольшая площадь</h3>
-              <p>— №3 —</p>
               <p class="description-characteristics">Все достопримечательности находятся очень близко</p>
             </li>
             <li class="feature-item additional-advantages">
               <h3 class="categories characteristics">Красивая дорога</h3>
-              <p>— №4 —</p>
               <p class="description-characteristics">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
             </li>
             <li class="feature-item additional-advantages">
               <h3 class="categories characteristics">Мало туристов</h3>
-              <p>— №5 —</p>
               <p class="description-characteristics">Большинство едет в Гранд Каньон и толпится там</p>
             </li>
           </ul>
@@ -167,7 +162,7 @@
                   <label for="number-kids" class="label-in-form people-label">Дети:</label>
                   <p class="input-second-wrapper">
                     <button type="button" name="minus-kids" id="minus-kids" class="button-amount minus"></button>
-                    <input type="text" class="date-age people-input" name="number-kids" id="number-kids" min="0" value="0">
+                    <input type="text" class="date-age people-input" name="number-kids" id="number-kids" min="0" value="0" required>
                     <button type="button" name="plus-kids" id="plus-kids" class="button-amount plus"></button>
                   </p>
                 </div>
@@ -225,6 +220,6 @@
         </div>
       </footer>
     </div>
-    <script src="search.js"></script>
+    <script src="js/search.js"></script>
   </body>
 </html>
