@@ -12,9 +12,11 @@ try {
 } catch (err) {
   isStorageSupport = false;
 }
+searchForm.classList.add("form-hide");
 
 searchLink.addEventListener("click", function(evt) {
   evt.preventDefault();
+  searchForm.classList.remove("form-hide");
   searchForm.classList.toggle("form-show");
   inputPeople.focus();
 });
@@ -40,5 +42,6 @@ searchButton.addEventListener("click", function(evt) {
 window.addEventListener("keydown", function (evt) {
   if (evt.keyCode === 27 && searchForm.classList.contains("form-show")) {
     searchForm.classList.remove("form-show");
+    searchForm.classList.add("form-hide");
   }
 });

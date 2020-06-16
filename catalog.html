@@ -36,7 +36,7 @@
           <form action="https://echo.htmlacademy.ru/courses" method="get" class="form-catalog">
             <fieldset class="fieldset-checkbox">
               <legend class="categories-catalog infrastructure">Инфраструктура:</legend>
-              <ul class="checkbox-list">
+              <ul class="checkbox-list list-reset">
                 <li class="filter-input">
                   <label for="swimming-pool" class="check">
                     <input class="visually-hidden filter-input-checkbox" type="checkbox" name="swimming-pool" id="swimming-pool" value="Бассейн" checked>
@@ -71,7 +71,7 @@
             </fieldset>
             <fieldset class="fieldset-checkbox">
               <legend class="categories-catalog type-house">Тип жилья:</legend>
-              <ul class="checkbox-list">
+              <ul class="checkbox-list list-reset">
                 <li class="filter-input">
                   <label for="hotel" class="check">
                     <input class="visually-hidden filter-input-checkbox" type="checkbox" name="hotel" id="hotel" value="Гостиница" checked>
@@ -124,7 +124,7 @@
                   <button type="button" class="toggle toggle-max" aria-label="Максимальная цена"></button>
                 </div>
               </div>
-              <button type="submit" name="show-button" id="show-button" class="show-button">Показать</button>
+              <button type="submit" id="show-button" class="show-button">Показать</button>
             </fieldset>
           </form>
         </section>
@@ -145,14 +145,14 @@
             </ul>
             <ul class="list-reset arrows">
               <li>
-                <a href="#">
+                <a href="#" aria-label="Стрелка сортировки (вверх)">
                   <svg xmlns="http://www.w3.org/2000/svg"  class="arrow first-arrow" width="11" height="10" viewBox="0 0 11 10">
                     <path d="M5.5 0L0 10h11z"/>
                   </svg>
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="#" aria-label="Стрелка сортировки (вниз)">
                   <svg xmlns="http://www.w3.org/2000/svg"  class="arrow second-arrow" width="11" height="10" viewBox="0 0 11 10">
                     <path d="M5.5 10L0 0h11"/>
                   </svg>
@@ -162,15 +162,17 @@
           </div>
         </div>
         <section>
-          <ul class="catalog-list">
+          <ul class="catalog-list list-reset">
             <li> 
               <div class="catalog-container">
                 <div class="about-hotel">
                   <div class="image-hotel">
-                    <img src="img/amara_resort.jpg" width="135" height="90" alt="Amara resort & SPA">
+                    <img src="img/amara-resort.jpg" width="135" height="90" alt="Amara resort & SPA">
                   </div>
                   <div class="container-hotel">
-                    <h3 class="name-hotel">Amara resort & SPA</h3>
+                    <a href="">
+                      <h3 class="name-hotel">Amara resort & SPA</h3>
+                    </a>
                     <div class="inside-hotel">
                       <div class="side-left">
                         <p class="type-hotel">Гостиница</p>
@@ -193,10 +195,12 @@
               <div class="catalog-container">
                 <div class="about-hotel">
                   <div class="image-hotel">
-                    <img src="img/desert_quail_inn.jpg" width="135" height="90" alt="Desert quail inn">
+                    <img src="img/desert-quail-inn.jpg" width="135" height="90" alt="Desert quail inn">
                   </div>
                   <div class="container-hotel">
-                    <h3 class="name-hotel">Desert quail inn</h3>
+                    <a href="">
+                      <h3 class="name-hotel">Desert quail inn</h3>
+                    </a>
                     <div class="inside-hotel">
                       <div class="side-left">
                         <p class="type-hotel">Мотель</p>
@@ -219,10 +223,12 @@
               <div class="catalog-container">
                 <div class="about-hotel">
                   <div class="image-hotel">
-                    <img src="img/villas_at_poco_diablo.jpg" width="135" height="90" alt="Villas at poco diablo">
+                    <img src="img/villas-at-poco-diablo.jpg" width="135" height="90" alt="Villas at poco diablo">
                   </div>
                   <div class="container-hotel">
-                    <h3 class="name-hotel">Villas at poco diablo</h3>
+                    <a href="">
+                      <h3 class="name-hotel">Villas at poco diablo</h3>
+                    </a>
                     <div class="inside-hotel">
                       <div class="side-left">
                         <p class="type-hotel">Апартаменты</p>

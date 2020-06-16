@@ -22,6 +22,7 @@
   --hover-gray: #EBEBEB;
   --border-white: #E5E5E5;
   --menu-current-color: #766357;
+  --disabled-color: #6A6A6A;
 }
 
 body {
@@ -155,7 +156,7 @@ img {
 
 .visually-hidden {
   position: absolute;
-  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
   clip: rect(1px, 1px, 1px, 1px);
   padding: 0;
   border: 0;
@@ -315,6 +316,7 @@ img {
   padding-top: 23px;
   padding-bottom: 9px;
   padding-left: 40px;
+  margin: 0;
 }
 
 .footer-contacts {
@@ -357,7 +359,7 @@ img {
 }
 
 .footer-contacts li {
-  margin: 6px;
+  margin-left: 6px;
   text-align: center;
 }
 
@@ -376,7 +378,7 @@ img {
   background-color: var(--basic-black);
   background-image: url("../img/background.jpg");
   width: 1200px;
-  height: 217px;
+  min-height: 217px;
   background-repeat: no-repeat;
   color: var(--basic-white);
   text-align: center;
@@ -399,9 +401,7 @@ img {
 }
 
 .catalog-list {
-  margin: 0;
   position: relative;
-  padding-left: 73px;
 }
 
 .checkbox-list li {
@@ -410,7 +410,7 @@ img {
 }
 
 .checkbox-list {
-  padding: 0;
+  padding-top: 24px;
 }
 
 .checkbox-icon {
@@ -437,6 +437,30 @@ img {
 
 .filter-input-checkbox + .checkbox-icon .checkbox-off {
   opacity: 1;
+}
+
+.filter-input-checkbox:disabled + .checkbox-icon .checkbox-off {
+  opacity: 1;
+  fill: var(--disabled-color);
+}
+
+.filter-input-checkbox:checked:disabled + .checkbox-icon .checkbox-on {
+  opacity: 1;
+  fill: var(--disabled-color);
+}
+
+.filter-input-checkbox:checked:disabled + .checkbox-icon .checkbox-off {
+  opacity: 0;
+  fill: var(--disabled-color);
+}
+
+.filter-input-checkbox:disabled + .checkbox-icon .checkbox-on {
+  opacity: 0;
+  fill: var(--disabled-color);
+}
+
+.filter-input-checkbox:focus + .checkbox-icon {
+  outline: 2px solid var(--basic-black);
 }
 
 .type-house {
@@ -591,10 +615,11 @@ img {
 }
 
 .footer-info {
-  padding-left: 111px;
   padding-bottom: 36px;
   grid-column-start: 1;
   grid-column-end: 2;
+  align-self: center;
+  justify-self: center;
 }
 
 .footer-contacts {
@@ -602,12 +627,16 @@ img {
   grid-column-end: 3;
   padding-top: 36px;
   padding-bottom: 36px;
+  align-self: center;
+  justify-self: center;
 }
 
 .footer-website-by {
   grid-column-start: 3;
   grid-column-end: 4;
-  margin-top: 30px;
+  padding-top: 30px;
+  align-self: center;
+  justify-self: center;
 }
 
 .map {
@@ -639,6 +668,10 @@ img {
   animation-name: bounse;
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
+}
+
+.form-hide {
+  display: none;
 }
 
 @keyframes bounse {
@@ -691,10 +724,6 @@ img {
   padding: 0;
   margin: 0;
   border: 0;
-}
-
-.calendar {
-  border: none;
 }
 
 .search-hotel:hover {
@@ -772,6 +801,7 @@ img {
   justify-content: space-between;
   border-bottom: 1px solid var(--line-gray);
   padding-top: 30px;
+  padding-left: 73px;
 }
 
 .about-hotel {
@@ -827,6 +857,7 @@ img {
 }
 
 .calendar {
+  border: none;
   position: absolute;
   fill: var(--gray);
   outline: none;
@@ -834,6 +865,11 @@ img {
   padding: 0;
   top: 3px;
   right: 5px;
+}
+
+.calendar:focus .icon-calendar {
+  padding: 1px;
+  outline: 2px solid var(--basic-black);
 }
 
 .calendar:hover {
@@ -898,6 +934,10 @@ img {
 .toggle:hover {
   width: 5.50px;
   height: 5.50px;
+}
+
+.toggle:focus {
+  outline: 1px solid var(--basic-white);
 }
 
 .range-controls .toggle-min {
