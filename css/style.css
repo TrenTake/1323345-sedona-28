@@ -23,6 +23,7 @@
   --border-white: #E5E5E5;
   --menu-current-color: #766357;
   --disabled-color: #6A6A6A;
+  --scale-color: #d7dcde;
 }
 
 body {
@@ -497,7 +498,7 @@ img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 300px;
+  width: 250px;
 }
 
 .sort-container {
@@ -546,9 +547,13 @@ img {
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
-  color: var(--basic-black);
   margin: 0;
   padding: 0;
+  max-width: 500px;
+}
+
+.name-hotel a {
+  color: var(--basic-black);
 }
 
 .type-hotel {
@@ -992,16 +997,15 @@ img {
 
 .range-controls {
   position: relative;
-  padding-top: 25px;
+  padding-top: 20px;
   min-height: 33px;
-  padding-right: 20px;
-  padding-left: 20px;
+  padding-left: 5px;
   border-radius: 5px;
 }
 
 .range-controls .scale {
   height: 2px;
-  background: #d7dcde;
+  background: var(--scale-color);
 }
 
 .range-controls .bar {
@@ -1020,8 +1024,8 @@ img {
   border: 8px solid #ffffff;
   background-color: var(--gray-point);
   border-radius: 50%;
-  -webkit-box-shadow: 0 2px 1px 0 rgba(171,	171,	171, 0.3);
-          box-shadow: 0 2px 1px 0 rgba(171,	171,	171, 0.3);
+  -webkit-box-shadow: 0 2px 1px 0 rgba(171, 171, 171, 0.3);
+          box-shadow: 0 2px 1px 0 rgba(171, 171, 171, 0.3);
   cursor: pointer;
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
@@ -1038,11 +1042,13 @@ img {
 }
 
 .range-controls .toggle-min {
-  left: 18px;
+  left: 4px;
+  top: 12px;
 }
 
 .range-controls .toggle-max {
-  left: 230px;
+  left: 240px;
+  top: 12px;
 }
 
 .price-controls {
@@ -1087,11 +1093,15 @@ img {
 
 .fieldset-checkbox:first-child {
   width: auto;
-  padding-left: 45px;
+  padding-left: 70px;
 }
 
 .fieldset-checkbox:nth-child(2) {
-  padding-left: 70px;
+  padding-left: 120px;
+}
+
+.fieldset-checkbox:last-child {
+  padding-left: 100px;
 }
 
 .infrastructure {
@@ -1133,11 +1143,11 @@ img {
   border: 2px solid var(--border-white);
 }
 
-.name-hotel:hover {
+.name-hotel:hover a {
   color: var(--light-blue);
 }
 
-.name-hotel:active {
+.name-hotel:active a {
   mix-blend-mode: normal;
   opacity: 0.3;
 }
