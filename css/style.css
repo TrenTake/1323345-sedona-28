@@ -722,7 +722,7 @@ img {
   line-height: 26px;
   color: var(--basic-black);
   padding-bottom: 20px;
-  padding-right: 144px;
+  margin-right: 144px;
 }
 
 .map {
