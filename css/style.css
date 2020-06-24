@@ -497,7 +497,7 @@ img {
   list-style: none;
   display: flex;
   justify-content: space-between;
-  width: 240px;
+  width: 239px;
   padding-bottom: 4px;
 }
 
@@ -511,7 +511,7 @@ img {
 .found {
   margin-top: 29px;
   margin-bottom: 31px;
-  margin-left: 75px;
+  margin-left: 73px;
   padding: 0;
 }
 
@@ -519,7 +519,7 @@ img {
   font-size: 12px;
   line-height: 18px;
   color: var(--basic-black);
-  margin-left: 50px;
+  margin-left: 47px;
   padding-bottom: 5px;
 }
 
@@ -594,8 +594,19 @@ img {
   min-height: 27px;
   text-align: center;
   margin-right: 73px;
-  margin-top: 65px;
-  padding-top: 7px;
+  padding-top: 4px;
+}
+
+.rating-first {
+  margin-top: 68px;
+}
+
+.rating-second {
+  margin-top: 69px;
+}
+
+.rating-third {
+  margin-top: 68px;
 }
 
 .page {
@@ -722,7 +733,7 @@ img {
   line-height: 26px;
   color: var(--basic-black);
   padding-bottom: 20px;
-  margin-right: 144px;
+  margin-right: 140px;
 }
 
 .map {
@@ -747,7 +758,6 @@ img {
   width: 568px;
   box-sizing: border-box;
   text-align: center;
-  display: none;
   padding: 55px;
 }
 
@@ -923,14 +933,25 @@ img {
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid var(--line-gray);
-  padding-top: 27px;
+  padding-top: 24px;
   padding-left: 73px;
 }
 
 .about-hotel {
   display: flex;
   align-items: center;
-  padding-bottom: 26px;
+}
+
+.about-hotel-first {
+  padding-bottom: 31px;
+}
+
+.about-hotel-second {
+  padding-bottom: 31px;
+}
+
+.about-hotel-third {
+  padding-bottom: 25px;
 }
 
 .image-hotel {
@@ -1230,6 +1251,7 @@ img {
 .arrows {
   display: flex;
   padding-right: 73px;
+  padding-top: 5px;
   position: absolute;
   right: 0;
 }
@@ -1275,16 +1297,16 @@ img {
 
 .four-stars {
   width: 87px;
-  margin-top: 3px;
+  margin-top: 5px;
 }
 
 .three-stars {
-  width: 66px;
-  margin-top: 3px;
+  width: 64px;
+  margin-top: 6px;
 }
 
 .two-stars {
-  width: 42px;
+  width: 40px;
   margin-top: 6px;
 }
 
